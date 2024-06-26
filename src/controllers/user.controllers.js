@@ -49,6 +49,7 @@ const registerUser = asyncHandler(async (req, res) => {
     fullName,
     avatar: avatar.secure_url,
     address,
+    // added few extra fields
   });
   const CreatedUser = await User.findById(user._id).select(
     "-password -refreshToken"
